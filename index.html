@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PF Illustrator</title>
+<link rel='icon' href='https://drive.google.com/thumbnail?id=1CZRjtT4NmjhcsZYm5vf1O3tCv37fPtir' type='image/png'/ >
+
+<style>
+#mainLogo {
+width: 90px;
+float: right;
+}
+#hrefHome {
+float: right;
+border: none;
+width: 180px;
+font-family: futura;
+font-color: grey; 
+font-size: 30px;
+border-radius: 10px;
+background: transparent;
+}
+#hrefHome:hover {
+background: #e3eefa;
+border: 1px solid grey;
+cursor: pointer;
+}
+#settings {
+width: 270px;
+height: 300px;
+position: absolute;
+top: 100px;
+border-radius: 0px 0px 10px 10px;
+border: 2px solid #ededed;
+z-index: 1;
+visibility: hidden;
+right: 5px;
+background: white;
+}
+#aboutPf {
+font-family: futura;
+color: grey;
+text-align: center;
+cursor: default;
+border-radius: 0px;
+}
+
+#version {
+font-family: futura;
+color: grey;
+text-align: center;
+cursor: default;
+border-radius: 5px;
+width: 270px;
+border: none;
+height: 50px;
+font-size: 20px;
+background: transparent;
+}
+#version:hover {
+background: #e3eefa;
+border: 1px solid grey;
+}
+#warning {
+font-family: futura;
+color: grey;
+text-align: center;
+cursor: default;
+border-radius: 5px;
+width: 270px;
+border: none;
+height: 50px;
+font-size: 20px;
+background: transparent;
+}
+#warning:hover {
+background: #e3eefa;
+border: 1px solid grey;
+}
+#fotter {
+font-family: futura;
+color: grey;
+text-align: center;
+cursor: pointer;
+border-radius: 5px;
+width: 100px;
+border: none;
+height: 50px;
+font-size: 20px;
+position: absolute;
+top: 230px;
+right: 75px;
+background: transparent;
+}
+#fotter:hover {
+background: #e3eefa;
+border: 1px solid grey;
+}
+#haha {
+position: absolute;
+z-index: 1;
+top: 157px;
+right: 235px;
+width: 30px;
+}
+#topNav {
+background: #f5f5f5;
+height: 100px;
+border-radius: 4px;
+}
+</style>
+</head>
+<body>
+<div id="topNav">
+<button id="hrefHome" title="PF Editor" onclick="showMenu()">PF<br> Illustrator</button>
+<img src="https://drive.google.com/thumbnail?id=1Od6pC8lo1We4EiTwM5NAtYEqvbSFneGW" id="mainLogo" title="PF Editor"></img>
+
+<div id="settings">
+<p id="aboutPf">PrintableForms Illustator<br>Version 1.0.0<br>©2021 PrintableForms</p>
+<a href="https://sites.google.com/view/explorer-search-engine/pf-editor-pro-help" target="_blank">
+<button id="version">PF Illustrator help</button></a><br>
+<a href="https://sites.google.com/view/printableforms-recource-center/home" target="_blank">
+<button id="warning">PrintableForms home</button></a>
+<img src="https://drive.google.com/thumbnail?id=1CZRjtT4NmjhcsZYm5vf1O3tCv37fPtir" id="haha"></img>
+<button id="fotter" onclick="closeFot()">Close</button>
+</div>
+</div>
+<script>
+function showMenu()
+{
+document.getElementById('settings').style.visibility="visible";
+}  
+
+function closeFot()
+{
+document.getElementById('settings').style.visibility="hidden";
+}
+</script>
+</body>
+</html>
