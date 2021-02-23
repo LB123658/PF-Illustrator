@@ -1,13 +1,16 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="Description" content="Digital drawing and photo editing." />
+
 <title>PF Illustrator</title>
-<link rel='icon' href='https://drive.google.com/thumbnail?id=1Od6pC8lo1We4EiTwM5NAtYEqvbSFneGW' type='image/png'/ >
+<link rel='icon' href='https://drive.google.com/thumbnail?id=1d47Lg2inPsOFn0gdbb0FjC0H38uEbBmr' type='image/png'/ >
 
 <style>
+body {
+background: #282828;
+}
 #mainLogo {
 width: 90px;
 float: right;
@@ -139,19 +142,306 @@ left: 120px;
 }
 #fileDiv {
 position: absolute;
-left: 120px;
+left: 119px;
+top: 36px;
 z-index: 1;
 background: white;
 visibility: hidden;
 border: 2px solid #ededed;
 border-radius: 4px;
+width: 100px;
+}
+#canvas {
+position: absolute;
+top: 150px;
+left: 50px;
+width: 280px;
+height: 280px;
+border-radius: 6px;
+border: none;
+cursor: crosshair;
+background: white;
+}
+.pixel {
+height: 20px;
+width: 20px;
+border: none;
+background: transparent;
+z-index: 1;
+
+cursor: crosshair;
+}
+.pixel:hover {
+background: black;
+}
+#one {
+position: absolute;
+top: 40px;
+left: 40px;
+}
+#two {
+position: absolute;
+top: 40px;
+left: 60px;
+}
+#three {
+position: absolute;
+top: 40px;
+left: 80px;
+}
+#four {
+position: absolute;
+top: 40px;
+left: 100px;
+}
+#five {
+position: absolute;
+top: 40px;
+left: 120px;
+}
+#six {
+position: absolute;
+top: 40px;
+left: 140px;
+}
+#seven {
+position: absolute;
+top: 40px;
+left: 160px;
+}
+#eight {
+position: absolute;
+top: 40px;
+left: 180px;
+}
+#nine {
+position: absolute;
+top: 40px;
+left: 200px;
+}
+#ten {
+position: absolute;
+top: 40px;
+left: 220px;
+}
+
+
+
+#aone {
+position: absolute;
+top: 60px;
+left: 40px;
+}
+#atwo {
+position: absolute;
+top: 60px;
+left: 60px;
+}
+#athree {
+position: absolute;
+top: 60px;
+left: 80px;
+}
+#afour {
+position: absolute;
+top: 60px;
+left: 100px;
+}
+#afive {
+position: absolute;
+top: 60px;
+left: 120px;
+}
+#asix {
+position: absolute;
+top: 60px;
+left: 140px;
+}
+#aseven {
+position: absolute;
+top: 60px;
+left: 160px;
+}
+#aeight {
+position: absolute;
+top: 60px;
+left: 180px;
+}
+#anine {
+position: absolute;
+top: 60px;
+left: 200px;
+}
+#aten {
+position: absolute;
+top: 60px;
+left: 220px;
+}
+
+
+
+#aaone {
+position: absolute;
+top: 80px;
+left: 40px;
+}
+#aatwo {
+position: absolute;
+top: 80px;
+left: 60px;
+}
+#aathree {
+position: absolute;
+top: 80px;
+left: 80px;
+}
+#aafour {
+position: absolute;
+top: 80px;
+left: 100px;
+}
+#aafive {
+position: absolute;
+top: 80px;
+left: 120px;
+}
+#aasix {
+position: absolute;
+top: 80px;
+left: 140px;
+}
+#aaseven {
+position: absolute;
+top: 80px;
+left: 160px;
+}
+#aaeight {
+position: absolute;
+top: 80px;
+left: 180px;
+}
+#aanine {
+position: absolute;
+top: 80px;
+left: 200px;
+}
+#aaten {
+position: absolute;
+top: 80px;
+left: 220px;
+}
+
+
+
+#aaaone {
+position: absolute;
+top: 100px;
+left: 40px;
+}
+#aaatwo {
+position: absolute;
+top: 100px;
+left: 60px;
+}
+#aaathree {
+position: absolute;
+top: 100px;
+left: 80px;
+}
+#aaafour {
+position: absolute;
+top: 100px;
+left: 100px;
+}
+#aaafive {
+position: absolute;
+top: 100px;
+left: 120px;
+}
+#aaasix {
+position: absolute;
+top: 100px;
+left: 140px;
+}
+#aaaseven {
+position: absolute;
+top: 100px;
+left: 160px;
+}
+#aaaeight {
+position: absolute;
+top: 100px;
+left: 180px;
+}
+#aaanine {
+position: absolute;
+top: 100px;
+left: 200px;
+}
+#aaaten {
+position: absolute;
+top: 100px;
+left: 220px;
+}
+
+
+
+#aaaaone {
+position: absolute;
+top: 120px;
+left: 40px;
+}
+#aaaatwo {
+position: absolute;
+top: 120px;
+left: 60px;
+}
+#aaaathree {
+position: absolute;
+top: 120px;
+left: 80px;
+}
+#aaaafour {
+position: absolute;
+top: 120px;
+left: 100px;
+}
+#aaaafive {
+position: absolute;
+top: 120px;
+left: 120px;
+}
+#aaaasix {
+position: absolute;
+top: 120px;
+left: 140px;
+}
+#aaaaseven {
+position: absolute;
+top: 120px;
+left: 160px;
+}
+#aaaaeight {
+position: absolute;
+top: 120px;
+left: 180px;
+}
+#aaaanine {
+position: absolute;
+top: 120px;
+left: 200px;
+}
+#aaaaten {
+position: absolute;
+top: 120px;
+left: 220px;
 }
 </style>
 </head>
 <body>
 <div id="topNav">
-<button id="hrefHome" title="PF Editor" onclick="showMenu()">PF<br> Illustrator</button>
-<img src="https://drive.google.com/thumbnail?id=1Od6pC8lo1We4EiTwM5NAtYEqvbSFneGW" id="mainLogo" title="PF Editor"></img>
+<button id="hrefHome" title="PF Illustrator" onclick="showMenu()">PF<br> Illustrator</button>
+<img src="https://drive.google.com/thumbnail?id=1d47Lg2inPsOFn0gdbb0FjC0H38uEbBmr" id="mainLogo" title="PF Illustrator"></img>
 
 <div id="settings">
 <p id="aboutPf">PrintableForms Illustator<br>Version 1.0.0<br>©2021 PrintableForms</p>
@@ -174,10 +464,72 @@ border-radius: 4px;
 <button class="edit">Layer 3</button>
 </div>
 
-<button class="edit" id="secondColumn" onmouseover="showFile()" onmouseout="hideFile()"><b>Edit</b></button>
-<div id="fileDiv">
-<button class="edit" onmouseover="showFile()" onmouseout="hideFile()">Screenshot</button>
+<button class="edit" id="secondColumn" onmouseover="showFile()" onmouseout="hideFile()"><b>File</b></button>
+<div id="fileDiv" onmouseover="showFile()" onmouseout="hideFile()">
+<button class="edit" title="Currently unavailable" style="text-decoration: line-through;">Screenshot</button>
+<button class="edit" title="Currently unavailable" style="text-decoration: line-through;">View HTML</button>
 </div>
+
+
+
+<div id="canvas">
+<button class="pixel" id="one"></button>
+<button class="pixel" id="two"></button>
+<button class="pixel" id="three"></button>
+<button class="pixel" id="four"></button>
+<button class="pixel" id="five"></button>
+<button class="pixel" id="six"></button>
+<button class="pixel" id="seven"></button>
+<button class="pixel" id="eight"></button>
+<button class="pixel" id="nine"></button>
+<button class="pixel" id="ten"></button>
+
+<button class="pixel" id="aone"></button>
+<button class="pixel" id="atwo"></button>
+<button class="pixel" id="athree"></button>
+<button class="pixel" id="afour"></button>
+<button class="pixel" id="afive"></button>
+<button class="pixel" id="asix"></button>
+<button class="pixel" id="aseven"></button>
+<button class="pixel" id="aeight"></button>
+<button class="pixel" id="anine"></button>
+<button class="pixel" id="aten"></button>
+
+<button class="pixel" id="aaone"></button>
+<button class="pixel" id="aatwo"></button>
+<button class="pixel" id="aathree"></button>
+<button class="pixel" id="aafour"></button>
+<button class="pixel" id="aafive"></button>
+<button class="pixel" id="aasix"></button>
+<button class="pixel" id="aaseven"></button>
+<button class="pixel" id="aaeight"></button>
+<button class="pixel" id="aanine"></button>
+<button class="pixel" id="aaten"></button>
+
+<button class="pixel" id="aaaone"></button>
+<button class="pixel" id="aaatwo"></button>
+<button class="pixel" id="aaathree"></button>
+<button class="pixel" id="aaafour"></button>
+<button class="pixel" id="aaafive"></button>
+<button class="pixel" id="aaasix"></button>
+<button class="pixel" id="aaaseven"></button>
+<button class="pixel" id="aaaeight"></button>
+<button class="pixel" id="aaanine"></button>
+<button class="pixel" id="aaaten"></button>
+
+<button class="pixel" id="aaaaone"></button>
+<button class="pixel" id="aaaatwo"></button>
+<button class="pixel" id="aaaathree"></button>
+<button class="pixel" id="aaaafour"></button>
+<button class="pixel" id="aaaafive"></button>
+<button class="pixel" id="aaaasix"></button>
+<button class="pixel" id="aaaaseven"></button>
+<button class="pixel" id="aaaaeight"></button>
+<button class="pixel" id="aaaanine"></button>
+<button class="pixel" id="aaaaten"></button>
+</div>
+
+
 
 </div>
 <script>
