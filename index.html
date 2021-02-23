@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -109,6 +110,42 @@ background: #f5f5f5;
 height: 100px;
 border-radius: 4px;
 }
+#saver {
+position: absolute;
+width: 100px;
+z-index: 1;
+background: white;
+visibility: hidden;
+border: 2px solid #ededed;
+border-radius: 4px;
+}
+.edit {
+width: 100px;
+border: none;
+background: transparent;
+border-radius: 4px;
+height: 30px;
+text-align: left;
+}
+.edit:hover {
+background: #bad8ff;
+}
+#nonHover:hover {
+background: white;
+}
+#secondColumn {
+position: absolute;
+left: 120px;
+}
+#fileDiv {
+position: absolute;
+left: 120px;
+z-index: 1;
+background: white;
+visibility: hidden;
+border: 2px solid #ededed;
+border-radius: 4px;
+}
 </style>
 </head>
 <body>
@@ -125,6 +162,23 @@ border-radius: 4px;
 <img src="https://drive.google.com/thumbnail?id=1CZRjtT4NmjhcsZYm5vf1O3tCv37fPtir" id="haha"></img>
 <button id="fotter" onclick="closeFot()">Close</button>
 </div>
+
+<button id="saveIt" class="edit" onmouseover="showSave()" onmouseout="hideSave()"><b>Edit</b></button>
+<div id="saver" onmouseover="showSave()" onmouseout="hideSave()">
+<button class="edit" >Copy text</button>
+<button class="edit" title="Are you sure you want to delete all edits?" onclick="reloadPage()">Delete all</button>
+<button style="width: 100px; cursor: default; height: 8px; background: white; border: none;"></button>
+<button class="edit" id="nonHover"><b>Select layer</b></button>
+<button class="edit">Layer 1</button>
+<button class="edit">Layer 2</button>
+<button class="edit">Layer 3</button>
+</div>
+
+<button class="edit" id="secondColumn" onmouseover="showFile()" onmouseout="hideFile()"><b>Edit</b></button>
+<div id="fileDiv">
+<button class="edit" onmouseover="showFile()" onmouseout="hideFile()">Screenshot</button>
+</div>
+
 </div>
 <script>
 function showMenu()
@@ -135,6 +189,26 @@ document.getElementById('settings').style.visibility="visible";
 function closeFot()
 {
 document.getElementById('settings').style.visibility="hidden";
+}
+function showSave()
+{
+document.getElementById('saver').style.visibility="visible";
+}
+function hideSave()
+{
+document.getElementById('saver').style.visibility="hidden";
+}
+function reloadPage() {
+location.reload();
+alert("All changes will be deleted.");
+}
+function showFile()
+{
+document.getElementById('fileDiv').style.visibility="visible";
+}
+function hideFile()
+{
+document.getElementById('fileDiv').style.visibility="hidden";
 }
 </script>
 </body>
