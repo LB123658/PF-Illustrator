@@ -692,7 +692,21 @@ position: absolute;
 top: 220px;
 left: 220px;
 }
-
+#myImage {
+position: absolute;
+top: 40px;
+left: 40px;
+width: 200px;
+height: 200px;
+z-index: 0;
+}
+#imageControls {
+position: absolute;
+top: 250px;
+right: 100px;
+background: white;
+border-radius: 10px;
+}
 </style>
 </head>
 <body>
@@ -839,9 +853,14 @@ left: 220px;
 <button class="pixel" id="ceight" onclick="ceight()"></button>
 <button class="pixel" id="cnine" onclick="cnine()"></button>
 <button class="pixel" id="cten" onclick="cten()"></button>
+
+<img src="" id="myImage">
 </div>
 
-
+<div id="imageControls">
+<input type="text" id="imgSrc" placeholder="Paste image URL">
+<button id="setimgSrc" onclick="setSrc()">Set image</button>
+</div>
 
 <script>
 function showMenu()
@@ -1290,6 +1309,10 @@ function cten()
 document.getElementById('cten').style.background="black";
 }
 
+function setSrc() {
+var x = document.getElementById("imgSrc").value;
+document.getElementById("myImage").src = x;
+}
 </script>
 </body>
 </html>
